@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>My projects</title>
+
+    <script type="text/javascript">
+        function newproject(){
+            var projectname=prompt("Enter name", "");
+            if(projectname){
+                document.data.name.value=projectname;
+                document.data.submit();
+            }
+        }
+    </script>
+</head>
+
+<body>
+Hello user!<br/>
+
+Projects:<br/>
+<ul>
+    <li><a href="project?id=1">Project 1</a></li>
+    <li><a href="project?id=2">Project 2</a></li>
+    <li><a href="project?id=3">Project 3</a></li>
+    <li><a href="project?id=4">Project 4</a></li>
+</ul>
+<br/>
+
+<!--<input type="button" value="New project" onclick="newproject()"/>-->
+<form name="data" action="/newproject.html" method="post" enctype="multipart/form-data">
+
+    upload jar <input type="file" name="jar " /><br/>
+    upload data <input type="file" name="data " />
+    <input type="submit"  value="upload" />
+</form>
+</body>
+</html>
+<!--
+jsp - динамічне створення html файлу
+-->
